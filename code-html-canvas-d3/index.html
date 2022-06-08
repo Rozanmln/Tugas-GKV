@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.1.1/d3.js"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1 class="text-2xl font-bold text-center">
+        Equipment Loss in Ukraine-Russian War
+      </h1>
+    </div>
+    <div class="flex">
+      <canvas
+        class="w-50 h-screen py-20 mx-16 rounded-lg drop-shadow-lg"
+        width="1000"
+        height="1000"
+        id="canvas--sketch"
+      ></canvas>
+      <h2 class="mt-16 text-2xl font-medium">Helicopter Losses</h2>
+    </div>
+    <div class="flex">
+      <canvas
+        class="w-50 h-screen bg-red-700 py-20 mx-16 rounded-lg drop-shadow-lg"
+        width="1000"
+        height="1000"
+        id="canvas--sketch"
+      ></canvas>
+      <h2 class="mt-16 text-2xl font-medium">Helicopter Losses</h2>
+    </div>
+    <script src="sketchd3.js"></script>
+  </body>
+</html>
