@@ -1,24 +1,25 @@
 TESTER = document.getElementById('plot');
 
-var day = [];
-var aircraft = [];
+var day = [1,2,3];
+var aircraft = [10,20,30];
 
-
-var data = [{
-x: [2, 3, 4, 5, 6, 7],
-y: [10, 27, 27, 29, 29, 30] }];
-var layout = {font: {size: 18}};
-var config = {responsive: true};
-Plotly.newPlot(TESTER, data, layout, config);
-
-d3.csv("russia_losses_equipment.csv", function(data){
+Plotly.d3.csv("russia_losses_equipment.csv", function(data){
     data.map(function(d){
-        day.push(d.day);
-        aircraft.push(+d.aircraft);
+        day.push(parseInt(d.day));
+        aircraft.push(parseInt(+d.aircraft));
     })
     console.log("Day", day)
     console.log("Aircraft",aircraft)    
 });
+
+var data = [{
+x: day,
+y: aircraft }];
+var layout = {font: {size: 18}};
+var config = {responsive: true};
+Plotly.newPlot(TESTER, data, layout, config);
+
+
 
 TESTER2 = document.getElementById('bar');
 
